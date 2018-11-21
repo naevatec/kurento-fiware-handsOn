@@ -1,0 +1,84 @@
+{
+  "name": "colordetectorfilter",
+  "version": "0.0.1-dev",
+  "kurentoVersion": "^6.0.0",
+  "imports": [
+    {
+      "name": "core",
+      "version": "^6.0.0",
+      "mavenVersion": "[6.0.0,7.0.0-SNAPSHOT)",
+      "npmVersion": ">=6.0.0 <7.0.0"
+    },
+    {
+      "name": "elements",
+      "version": "^6.0.0",
+      "mavenVersion": "[6.0.0,7.0.0-SNAPSHOT)",
+      "npmVersion": ">=6.0.0 <7.0.0"
+    },
+    {
+      "name": "filters",
+      "version": "^6.0.0",
+      "mavenVersion": "[6.0.0,7.0.0-SNAPSHOT)",
+      "npmVersion": ">=6.0.0 <7.0.0"
+    }
+  ],
+  "code": {
+    "api": {
+      "java": {
+        "mavenGroupId": "org.kurento.module",
+        "mavenArtifactId": "colordetectorfilter",
+        "mavenVersion": "0.0.1-SNAPSHOT",
+        "packageName": "org.kurento.module.colordetectorfilter"
+      },
+      "js": {
+        "nodeName": "kurento-module-colordetectorfilter",
+        "npmVersion": "0.0.1",
+        "npmDescription": ""
+      }
+    },
+    "implementation": {
+      "cppNamespace": "kurento::module::colordetectorfilter",
+      "lib": "libkmscolordetectorfilter"
+    }
+  },
+  "remoteClasses": [
+    {
+      "name": "ColorDetectorFilter",
+      "doc": "ColorDetectorFilter interface. Documentation about the module",
+      "extends": "OpenCVFilter",
+      "constructor": {
+        "params": [
+          {
+            "name": "mediaPipeline",
+            "doc": "the parent :rom:cls:`MediaPipeline`",
+            "type": "MediaPipeline"
+          }
+        ],
+        "doc": "Create an element"
+      },
+      "events": [
+        "ColorDetected"
+      ]
+    }
+  ],
+  "complexTypes": [],
+  "events": [
+    {
+      "properties": [
+        {
+          "name": "posX",
+          "doc": "posicion X detectada",
+          "type": "int"
+        },
+        {
+          "name": "posY",
+          "doc": "posicion Y detectada",
+          "type": "int"
+        }
+      ],
+      "extends": "Media",
+      "name": "ColorDetected",
+      "doc": "Informa de la posicion donde se ha encontrado el color configurado"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+Manifest-Version: 1.0
+Implementation-Title: kurento-colordetector_v1
+Implementation-Version: 6.8.0
+Build-Timestamp: 
+Java-Version: 1.8.0_181
+Built-By: gtunon
+Scm-Connection: scm:git:git://github.com/naevatec/kurento-fiware-hands
+ on.git
+Specification-Vendor: Kurento
+Os-Arch: amd64
+Specification-Title: kurento-colordetector_v1
+Implementation-Vendor-Id: org.kurento.tutorial
+Java-Vendor: Oracle Corporation
+Os-Name: Linux
+Scm-Url: https://github.com/naevatec/kurento-fiware-handson
+Implementation-Vendor: Kurento
+Os-Version: 4.4.0-139-generic
+Scm-Revision: 
+Build-Jdk: 1.8.0_181
+Specification-Version: 6.8.0
+Created-By: Maven Integration for Eclipse
+Implementation-URL: https://www.kurento.org/docs/6.8.0/kurento-tutoria
+ l/color-detector
+
