@@ -26,6 +26,8 @@
 
 ## 2. OpenCV module creation
   
+  ### Generate the module code in the folder created by the scaffolder:
+
   Create a workdirectory and execute:
 
   ```
@@ -33,22 +35,15 @@
   
   ```
 
-  Modify `colorDetector/color-detector-filter/src/server/interface/colordetectorfilter.ColorDetectorFilter.kmd.json` to add the event. (check the provided json).
-
-  Develop filter logic `colorDetector/color-detector-filter/src/server/implementation/objects/ColorDetectorOpenCVImpl.cpp` (check provided cpp).
-
-
-  ### Generate the module code in the folder created by the scaffolder:
-  
-
   Edit generated CMAKE with: 
-
 
   ```
   # Use "-fPIC" / "-fPIE" for all targets by default, including static libs
   set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 
   ```
+
+  Modify `colorDetector/color-detector-filter/src/server/interface/colordetectorfilter.ColorDetectorFilter.kmd.json` to add the event. (check the provided json).
 
   And make
 
@@ -58,6 +53,7 @@
   cmake .. 
 
   ```
+  Develop filter logic `colorDetector/color-detector-filter/src/server/implementation/objects/ColorDetectorFilterOpenCVImpl.cpp` (check provided cpp).
 
   ### Generate client code:
 
@@ -66,7 +62,7 @@
   cmake .. -DGENERATE_JAVA_CLIENT_PROJECT=TRUE
 
   #JS
-  make .. -DGENERATE_JS_CLIENT_PROJECT=TRUE
+  cmake .. -DGENERATE_JS_CLIENT_PROJECT=TRUE
 
   ```
 
@@ -127,8 +123,8 @@
   Configure in `/etc/default/kurento-media-server` the following enviromental variables
 
   ```
-  KURENTO_MODULES_PATH=<module_path>/build/src
-  GST_PLUGIN_PATH=<module_path>/build/src
+  KURENTO_MODULES_PATH="<module_path>/build/src"
+  GST_PLUGIN_PATH="<module_path>/build/src"
 
   ``` 
 
