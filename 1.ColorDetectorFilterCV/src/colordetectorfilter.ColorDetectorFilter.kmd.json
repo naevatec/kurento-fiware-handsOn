@@ -1,9 +1,9 @@
 {
   "remoteClasses": [
     {
-      "name": "colorDetector",
+      "name": "ColorDetectorFilter",
       "extends": "OpenCVFilter",
-      "doc": "colorDetector interface. Documentation about the module",
+      "doc": "ColorDetectorFilter interface. Documentation about the module",
       "constructor": {
 	"doc": "Create an element",
 	"params": [

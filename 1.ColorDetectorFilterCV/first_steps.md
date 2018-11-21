@@ -29,13 +29,13 @@
   Create a workdirectory and execute:
 
   ```
-  kurento-module-scaffold.sh colorDetector colorDetector opencv_filter
+  kurento-module-scaffold.sh ColorDetectorFilter colorDetector opencv_filter
   
   ```
 
-  Modify `colorDetector/color-detector/src/server/interface/colordetector.colordetector.kms.json` to add the event. (check the provided json).
+  Modify `colorDetector/color-detector-filter/src/server/interface/colordetectorfilter.ColorDetectorFilter.kmd.json` to add the event. (check the provided json).
 
-  Develop filter logic `colorDetector/color-detector/src/server/implementation/objects/colorDetectorOpenCVImpl.cpp` (check provided cpp).
+  Develop filter logic `colorDetector/color-detector-filter/src/server/implementation/objects/ColorDetectorOpenCVImpl.cpp` (check provided cpp).
 
 
   ### Generate the module code in the folder created by the scaffolder:
@@ -68,7 +68,21 @@
   #JS
   make .. -DGENERATE_JS_CLIENT_PROJECT=TRUE
 
-  ````
+  ```
+
+  ### Work-arround for Java 1.8
+
+  Change the `build/java/pom.xml` to force Java 1.8 compilation
+  
+  ```
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.target>1.8</maven.compiler.target>
+    <maven.compiler.source>1.8</maven.compiler.source>
+  </properties>
+
+  ```
+  
 
   ### Compile the module
   
